@@ -28,7 +28,7 @@ FROM python:3.6
 RUN mkdir -p /home/app
 
 # create the app user
-RUN addgroup --system app && adduser --system app -G app
+RUN addgroup --system app && adduser --system app && adduser app app
 
 # create the appropriate directories
 ENV HOME=/home/app
